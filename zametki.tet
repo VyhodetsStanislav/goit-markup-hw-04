@@ -33,3 +33,11 @@
   margin-right: auto;
   width: 1200px;
 }
+
+.clients-li:hover,
+.clients-li:focus,
+.clients-li:hover svg,
+.clients-li:focus svg {
+  fill: #2196f3;
+  border-color: #2196f3;
+}

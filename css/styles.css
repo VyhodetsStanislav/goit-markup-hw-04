@@ -97,10 +97,16 @@ p {
   cursor: pointer;
   box-sizing: border-box;
 }
-.header-buttons:hover,
-.header-buttons:focus {
+.indent-buttons:hover a,
+.indent-buttons:focus a,
+.indent-buttons:hover svg,
+.indent-buttons:focus svg {
   color: var(--menu-aktiv);
-  fill: #000000;
+  fill: var(--menu-aktiv);
+}
+.buttons:hover,
+.buttons:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .indent-buttons + .indent-buttons {
   margin-left: 30px;
@@ -108,12 +114,10 @@ p {
 .indent + .indent {
   margin-left: 50px;
 }
-.buttons-mail {
+.buttons {
   display: inline-flex;
   padding: 0px;
   margin: 0px;
-  width: 16px;
-  height: 12px;
   margin-right: 10px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -121,10 +125,18 @@ p {
   fill: #757575;
   box-sizing: border-box;
 }
-.buttons-mail:hover {
-  fill: #000000;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.buttons-mail {
+  width: 16px;
+  height: 12px;
+}
+
+.buttons-tel {
+  width: 147px;
+  height: 16px;
+}
+.buttons-tell {
+  width: 10px;
+  height: 16px;
 }
 
 /* банер */
@@ -364,25 +376,31 @@ p {
 .clients-svg {
   margin: 0;
   padding: 0;
-  width: 170px;
-  height: 92px;
-  border-radius: 4px;
-  border: 1px solid #afb1b8;
+  width: 106px;
+  height: 60px;
   fill: #afb1b8;
 }
 .clients-li + .clients-li {
   margin-left: 30px;
 }
 .clients-li {
-  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+  width: 170px;
+  height: 92px;
   margin-bottom: 94px;
+  border-radius: 4px;
+  border: 1px solid #afb1b8;
 }
-.clients-svg:hover,
-.clients-svg:focus {
+.clients-li:hover,
+.clients-li:focus,
+.clients-li:hover svg,
+.clients-li:focus svg {
   fill: #2196f3;
   border-color: #2196f3;
 }
-
 /* footer */
 
 .footer {
@@ -517,7 +535,16 @@ p {
 }
 /*  */
 .work-indent:hover {
+}
+/* .work-shadow {
+  width: 370px;
+  height: 444px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+} */
+.work-indent:hover,
+.work-indent:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .wrap {
   flex-wrap: wrap;
@@ -526,7 +553,6 @@ p {
   margin-left: 30px;
   margin-bottom: 30px;
   outline: 1px solid #eeeeee;
-  /* border: 1px solid #eeeeee; */
 }
 .wrap > li:nth-child(3n + 1) {
   margin-left: 15px;
